@@ -33,3 +33,18 @@ class GamersDB(models.Model):
     id = models.IntegerField(primary_key=True, auto_created=True)
     player_1 = models.CharField(max_length=32)
     player_2 = models.CharField(max_length=32)
+
+
+class RoundsDB(models.Model):
+    """
+    This class is for test the API with the frontend
+    """
+    id = models.IntegerField(primary_key=True)
+    name_player_1 = models.CharField(max_length=32)
+    name_player_2 = models.CharField(max_length=32)
+    move_player_1 = models.CharField(max_length=1)
+    move_player_2 = models.CharField(max_length=1)
+    winner = models.CharField(max_length=32, null=True)
+    round_1 = models.CharField(max_length=32, null=True)
+    round_2 = models.CharField(max_length=32, null=True)
+    round_3 = models.CharField(max_length=32, null=True)

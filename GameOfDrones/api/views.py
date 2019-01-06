@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .serializers import PlayerSerializer, SimpleGameSerializer, GamersSerializer
-from .models import PlayerDB, SimpleGame, GamersDB
+from .serializers import PlayerSerializer, SimpleGameSerializer, GamersSerializer, RoundsSerializer
+from .models import PlayerDB, SimpleGame, GamersDB, RoundsDB
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -49,3 +49,11 @@ class InitGameViewSet(viewsets.ModelViewSet):
     """
     queryset = GamersDB.objects.all()
     serializer_class = GamersSerializer
+
+
+class RoundViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint to initialize the game
+    """
+    queryset = RoundsDB.objects.all()
+    serializer_class = RoundsSerializer
