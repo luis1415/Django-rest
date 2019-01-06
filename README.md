@@ -2,6 +2,8 @@
 
 ### Setup
 
+Backend django-rest framework
+
 ` pip install -r requirements.txt`
 
 ` python manage.py makemigrations`
