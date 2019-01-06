@@ -28,5 +28,6 @@ router.register(r'players', views.PlayerViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(router.urls)),
+    url(r'^games/', views.SimpleGameList.as_view()),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

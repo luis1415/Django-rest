@@ -15,3 +15,15 @@ class GameDB(models.Model):
     player_1 = models.CharField(max_length=32)
     player_2 = models.CharField(max_length=32)
     winner = models.CharField(max_length=32)
+
+
+class SimpleGame(models.Model):
+    """
+    This class is for test the API with the frontend
+    """
+    id = models.IntegerField(primary_key=True)
+    name_player_1 = models.CharField(max_length=32)
+    name_player_2 = models.CharField(max_length=32)
+    move_player_1 = models.CharField(max_length=1)
+    move_player_2 = models.CharField(max_length=1)
+    winner = models.CharField(max_length=32)
