@@ -31,3 +31,11 @@ class SimpleGameList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class SimpleGameViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = SimpleGame.objects.all()
+    serializer_class = SimpleGameSerializer
