@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import PlayerDB, SimpleGame
+from .models import PlayerDB, SimpleGame, GamersDB
 
 
 class PlayerSerializer(serializers.ModelSerializer):
@@ -58,3 +58,9 @@ class SimpleGameSerializer(serializers.ModelSerializer):
         game_.save()
 
         return game_
+
+
+class GamersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GamersDB
+        fields = ('id', 'player_1', 'player_2')

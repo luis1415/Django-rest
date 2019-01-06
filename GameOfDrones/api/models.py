@@ -27,3 +27,9 @@ class SimpleGame(models.Model):
     move_player_1 = models.CharField(max_length=1)
     move_player_2 = models.CharField(max_length=1)
     winner = models.CharField(max_length=32)
+
+
+class GamersDB(models.Model):
+    id = models.IntegerField(primary_key=True, auto_created=True)
+    player_1 = models.CharField(max_length=32)
+    player_2 = models.CharField(max_length=32)

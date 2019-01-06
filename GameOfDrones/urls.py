@@ -23,6 +23,7 @@ from GameOfDrones.api import views
 router = routers.DefaultRouter()
 router.register(r'players', views.PlayerViewSet)
 router.register(r'games', views.SimpleGameViewSet)
+router.register(r'initgame', views.InitGameViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
