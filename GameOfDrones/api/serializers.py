@@ -63,7 +63,7 @@ class SimpleGameSerializer(serializers.ModelSerializer):
 class GamersSerializer(serializers.ModelSerializer):
     class Meta:
         model = GamersDB
-        fields = ('id', 'player_1', 'player_2')
+        fields = ('id_game', 'player_1', 'player_2', 'date')
 
 
 class RoundsSerializer(serializers.ModelSerializer):

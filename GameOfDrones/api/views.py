@@ -47,7 +47,7 @@ class InitGameViewSet(viewsets.ModelViewSet):
     """
     API endpoint to initialize the game
     """
-    queryset = GamersDB.objects.all()
+    queryset = GamersDB.objects.all().order_by('-date')
     serializer_class = GamersSerializer
 
 

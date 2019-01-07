@@ -30,7 +30,8 @@ class SimpleGame(models.Model):
 
 
 class GamersDB(models.Model):
-    id = models.IntegerField(primary_key=True, auto_created=True)
+    date = models.DateTimeField(auto_now_add=True)
+    id_game = models.IntegerField(auto_created=True, null=True)
     player_1 = models.CharField(max_length=32)
     player_2 = models.CharField(max_length=32)
 
